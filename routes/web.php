@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', 'LoginController@loginPage')->name('login');
+Route::get('/info', 'InfoController@infoPage')->name('info');
+Route::get('/registreren', 'registrerenController@registrerenPage')->name('registreren');
+Route::get('/tijdlijn', 'tijdlijnController@tijdlijnPage')->name('tijdlijn');
+Route::get('/upload', 'uploadController@uploadPage')->name('upload');
