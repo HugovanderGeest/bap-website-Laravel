@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/duck/{id}', 'DuckController@showDuck');
+Route::get('/duck/{categry}/{id}', 'DuckController@showDuck');
 
 Route::get('/login', 'LoginController@loginPage')->name('login');
 Route::get('/info', 'InfoController@infoPage')->name('info');
