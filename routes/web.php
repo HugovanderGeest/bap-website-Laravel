@@ -18,8 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/duck/{id}', 'DuckController@showDuck');
+
 Route::get('/login', 'LoginController@loginPage')->name('login');
 Route::get('/info', 'InfoController@infoPage')->name('info');
 Route::get('/registreren', 'registrerenController@registrerenPage')->name('registreren');
 Route::get('/tijdlijn', 'tijdlijnController@tijdlijnPage')->name('tijdlijn');
 Route::get('/upload', 'uploadController@uploadPage')->name('upload');
+
+Route::get('/duck', 'DuckController@uploadPage')->name('duck');
