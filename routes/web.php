@@ -27,3 +27,7 @@ Route::get('/tijdlijn', 'tijdlijnController@tijdlijnPage')->name('tijdlijn');
 Route::get('/upload', 'uploadController@uploadPage')->name('upload');
 
 Route::get('/duck', 'DuckController@uploadPage')->name('duck');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
