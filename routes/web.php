@@ -13,22 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-
-Route::get('/login', 'LoginController@loginPage')->name('login');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/info', 'InfoController@infoPage')->name('info');
-Route::get('/registreren', 'RegistrerenController@registrerenPage')->name('registreren');
+//Route::get('/registreren', 'RegistrerenController@registrerenPage')->name('registreren');
 Route::get('/tijdlijn', 'TijdlijnController@tijdlijnPage')->name('tijdlijn');
 Route::get('/upload', 'UploadController@uploadPage')->name('upload');
 
 Route::get('/duck', 'DuckController@uploadPage')->name('duck');
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 

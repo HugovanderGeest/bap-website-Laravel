@@ -9,7 +9,6 @@
 <body>
     <p>
         <h1>dit is html</h1>
-
         <h5>{{ $id }}</h5>
     </p>
 </body>
