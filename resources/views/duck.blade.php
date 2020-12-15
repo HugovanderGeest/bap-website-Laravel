@@ -7,7 +7,11 @@
 </head>
 
 <body>
-    <h1>dit is html</h1>
+    <p>
+        <h1>dit is html</h1>
+
+        <h5>{{ $id }}</h5>
+    </p>
 </body>
 
 </html>

@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/duck/{categry}/{id}', 'DuckController@showDuck');
+
 
 Route::get('/login', 'LoginController@loginPage')->name('login');
 Route::get('/info', 'InfoController@infoPage')->name('info');
@@ -31,3 +31,17 @@ Route::get('/duck', 'DuckController@uploadPage')->name('duck');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/duck/{id}', 'DuckController@showDuck')->where('id', '[0-9]+');
+
+Route::prefix('admin')->group(function () {
+    Route::get('gebruiker', function () {
+        return 'admin gebruiker';
+    });
+    Route::get('ducks', function () {
+        return 'admin ducks';
+    });
+    Route::get('categories', function () {
+        return 'admin categories';
+    });
+});
