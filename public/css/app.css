@@ -64,6 +64,8 @@ section {
   display: block;
 }
 
+
+
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
@@ -4416,7 +4418,6 @@ input[type=button].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
 }
 
 .nav-link:hover,
@@ -4505,7 +4506,6 @@ input[type=button].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
 }
 
 .navbar .container,
@@ -4537,20 +4537,13 @@ input[type=button].btn-block {
 
 .navbar-nav {
   display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
   list-style: none;
+  padding-bottom: -150px;
 }
 
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
-}
-
-.navbar-nav .dropdown-menu {
-  position: static;
-  float: none;
 }
 
 .navbar-text {
@@ -6144,7 +6137,6 @@ a.close.disabled {
   align-items: center;
   padding: 0.25rem 0.75rem;
   color: #6c757d;
-  background-color: rgba(255, 255, 255, 0.85);
   background-clip: padding-box;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   border-top-left-radius: calc(0.25rem - 1px);
