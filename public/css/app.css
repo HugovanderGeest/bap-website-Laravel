@@ -10893,9 +10893,19 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 
+
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6;
   }
 }
 
+.nav-item {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.logo {
+  width: 105px;
+  overflow: hidden;
+}
