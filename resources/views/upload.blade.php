@@ -13,14 +13,23 @@
 
     <form action="{{ route('upload') }}" method="POST">
         @csrf
-        <label>NAAM</label><br>
-        <input type="text" value="" name="naam"><br>
+        <label>NAAM</label>
+        @error('naam')
+        <h4>{{ $message }} </h4>
+        @enderror<br>
+        <input type="text" value="" name="naam"><br><br>
 
-        <label>LOCATIE</label><br>
-        <input type="text" value="" name="naam"><br>
+        <label>LOCATIE</label>
+        @error('locatie')
+        <h4>{{ $message }} </h4>
+        @enderror<br>
+        <input type="text" value="" name="locatie"><br><br>
 
-        <label>DATUM</label><br>
-        <input type="text" value="" name="naam"><br>
+        <label>DATUM</label>
+        @error('datum')
+        <h4>{{ $message }} </h4>
+        @enderror<br>
+        <input type="text" value="" name="datum"><br>
 
         <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
         <p><label for="file" style="cursor: pointer;">Pak foto</label></p>

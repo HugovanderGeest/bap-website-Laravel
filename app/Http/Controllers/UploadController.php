@@ -11,8 +11,16 @@ class UploadController extends Controller
         return view('upload');
     }
 
-    public function handelPage()
+    public function handelPage(Request $request)
     {
-        return "ja het werkt";
+        $data = $request->validate(
+            [
+                'naam' => 'required|min:2|max:20',
+                'datum' => 'required|date',
+                'locatie' => 'required',
+                'image' => 'required|image'
+
+            ]
+        );
     }
 }
