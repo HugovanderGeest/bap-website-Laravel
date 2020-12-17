@@ -10,68 +10,32 @@
 
 <body>
 
-    <div class="content">
-        <div class="title m-b-md">
-            upload </div>
 
-        <div class="links">
-            <a> dit is de upload page</a>
-        </div>
+    <form action="{{ route('upload') }}" method="POST">
+        @csrf
+        <label>NAAM</label><br>
+        <input type="text" value="" name="naam"><br>
 
-        <style>
-            html,
-            body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-                background-color: #121212;
-            }
+        <label>LOCATIE</label><br>
+        <input type="text" value="" name="naam"><br>
 
-            .full-height {
-                height: 100vh;
-            }
+        <label>DATUM</label><br>
+        <input type="text" value="" name="naam"><br>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+        <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
+        <p><label for="file" style="cursor: pointer;">Pak foto</label></p>
+        <p><img id="output" width="200" /></p>
 
-            .position-ref {
-                position: relative;
-            }
+        <script>
+            var loadFile = function(event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+        <button type="submit">Opslaan</button>
+    </form>
 
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links>a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
 
 </body>
 

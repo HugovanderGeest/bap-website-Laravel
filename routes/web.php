@@ -19,7 +19,12 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/info', 'InfoController@infoPage')->name('info');
 //Route::get('/registreren', 'RegistrerenController@registrerenPage')->name('registreren');
 Route::get('/tijdlijn', 'TijdlijnController@tijdlijnPage')->name('tijdlijn');
+
+// form met upload
 Route::get('/upload', 'UploadController@uploadPage')->name('upload');
+Route::post('/upload', 'UploadController@handelPage')->name('upload');
+
+
 
 Route::get('/duck', 'DuckController@uploadPage')->name('duck');
 

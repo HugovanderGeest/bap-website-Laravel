@@ -10,4 +10,9 @@ class UploadController extends Controller
     {
         return view('upload');
     }
+
+    public function handelPage()
+    {
+        return "ja het werkt";
+    }
 }
