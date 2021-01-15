@@ -11,25 +11,25 @@
 <body>
 
 
-    <form action="{{ route('upload') }}" method="POST">
+    <form action="{{ route('upload.handel') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <label>NAAM</label>
         @error('naam')
         <h4>{{ $message }} </h4>
         @enderror<br>
-        <input type="text" value="" name="naam"><br><br>
+        <input type="text" value="{{old('name')}}" name="name"><br><br>
 
         <label>LOCATIE</label>
         @error('locatie')
         <h4>{{ $message }} </h4>
         @enderror<br>
-        <input type="text" value="" name="locatie"><br><br>
+        <input type="text" value="{{old('locatie')}}" name="locatie"><br><br>
 
         <label>DATUM</label>
         @error('datum')
         <h4>{{ $message }} </h4>
         @enderror<br>
-        <input type="text" value="" name="datum"><br>
+        <input type="date" value="{{old('datum')}}" name="datum"><br>
 
         <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
         <p><label for="file" style="cursor: pointer;">Pak foto</label></p>

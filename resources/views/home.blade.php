@@ -85,4 +85,14 @@
         Datum: 13-12-20<br></h2>
     <p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
 </article>
+
+<div>
+
+    @foreach($uploads as $upload)
+    {{$upload->locatie}}
+    @endforeach
+
+
+</div>
+
 @endsection

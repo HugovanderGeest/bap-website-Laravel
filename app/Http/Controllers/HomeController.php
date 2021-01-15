@@ -1,11 +1,14 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Upload;
 
 class HomeController extends Controller
 {
+
     /**
      * Create a new controller instance.
      *
@@ -29,7 +32,8 @@ class HomeController extends Controller
     public function index()
     {
         $naam = 'pietje';
+        $uploads = Upload::all();
 
-        return view('home', ['mijntekst' => $naam]);
+        return view('home', ['mijntekst' => $naam, "uploads" => $uploads]);
     }
 }

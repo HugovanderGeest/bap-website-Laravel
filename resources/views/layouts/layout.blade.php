@@ -17,7 +17,8 @@
 
     <link rel="stylesheet" href="{{ asset("assets/css/main.css") }}" />
     <noscript>
-        <link rel="stylesheet" href="{{ asset("assets/css/noscript.css") }}" /></noscript>
+        <link rel="stylesheet" href="{{ asset("assets/css/noscript.css") }}" />
+    </noscript>
 
 
 </head>
@@ -85,7 +86,7 @@
                             <li class="nav-item "><a href="{{ route('home') }}">Home</a></li>
                             <li class="nav-item"><a href="{{ route('duck') }}">Duck</a></li>
                             <li class="nav-item "><a href="{{ route('info') }}">Info</a></li>
-                            <li class="nav-item "><a href="{{ route('upload') }}">upload</a></li>
+                            <li class="nav-item "><a href="{{ route('upload.form') }}">upload</a></li>
                             <li class="nav-item"><a href="{{ route('tijdlijn') }}">tijdlijn</a></li>
 
                             @endguest

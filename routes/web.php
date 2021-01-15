@@ -21,8 +21,8 @@ Route::get('/info', 'InfoController@infoPage')->name('info');
 Route::get('/tijdlijn', 'TijdlijnController@tijdlijnPage')->name('tijdlijn');
 
 // form met upload
-Route::get('/upload', 'UploadController@uploadPage')->name('upload');
-Route::post('/upload', 'UploadController@handelPage')->name('upload');
+Route::get('/upload', 'UploadController@uploadPage')->name('upload.form');
+Route::post('/upload', 'UploadController@handelPage')->name('upload.handel');
 
 
 
