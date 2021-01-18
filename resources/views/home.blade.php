@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
 @foreach($uploads as $upload)
 
 <article class="thumb">
@@ -17,5 +19,12 @@
 </article>
 
 @endforeach
+
+
+@endsection
+
+@section ('footer')
+
+{{$uploads->Links()}}
 
 @endsection

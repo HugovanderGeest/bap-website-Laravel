@@ -37,6 +37,7 @@
             <img class="logo" src="images/thumbs/logo.png" alt="">
 
 
+
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div class="container">
                     <!-- <a class="navbar-brand" href="{{ url('/') }}">
@@ -72,6 +73,8 @@
                                     {{ __('Logout') }}
                                 </a>
 
+
+
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
@@ -103,7 +106,9 @@
             @yield('content')
         </div>
 
-
+        <div class="footer">
+            @yield ('footer')
+        </div>
 
     </div>
 

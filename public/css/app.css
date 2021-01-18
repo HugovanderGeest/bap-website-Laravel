@@ -64,7 +64,10 @@ section {
   display: block;
 }
 
-
+.footer {
+position: sticky;
+float: left;
+}
 
 body {
   margin: 0;

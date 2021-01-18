@@ -32,7 +32,9 @@ class HomeController extends Controller
     public function index()
     {
         $naam = 'pietje';
-        $uploads = Upload::all();
+        // $uploads = Upload::all();
+        $uploads = Upload::paginate(20);
+
 
         return view('home', ['mijntekst' => $naam, "uploads" => $uploads]);
     }
