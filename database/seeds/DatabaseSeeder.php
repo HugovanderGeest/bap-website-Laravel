@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Upload;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,15 +12,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
 
-        for ($i = 0; $i < 200; $i++) {
-            $Upload = new Upload();
-            $Upload->name = '' . $i;
-            $Upload->locatie = 'Amsterdam';
-            $Upload->datum = new \DateTime();
-            $Upload->image = '';
-            $Upload->save();
-        }
+        $this->call(UserSeeder::class);
+        $this->call(DuckSeeder::class);
+        // $this->call(idkSeeder::class);
+        // $this->call(idkSeeder::class);
     }
 }
