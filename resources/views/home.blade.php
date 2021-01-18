@@ -5,7 +5,7 @@
 @foreach($uploads as $upload)
 
 <article class="thumb">
-    <a href="{{$upload->image}}" class="image"><img src="{{$upload->image}}" alt="image" /></a>
+    <a href="{{Storage::url($upload->image)}}" class="image"><img src="{{Storage::url($upload->image)}}" alt="image" /></a>
     <h2>Soort: {{$upload->name}}
         <br>
         Locatie: {{$upload->locatie}}

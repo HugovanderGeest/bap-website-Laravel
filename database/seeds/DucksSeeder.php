@@ -15,13 +15,14 @@ class DucksSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
+        // $random_nummer = random(1, 5);
 
         for ($i = 0; $i < 200; $i++) {
             $Upload = new Upload();
             $Upload->name =  $faker->text(20);
             $Upload->locatie = $faker->locale(10);
             $Upload->datum = $faker->dateTime();
-            $Upload->image = $faker->imageUrl . '.png';
+            $Upload->image = 'upload_img/0slcCva7FdKgZjPddKb28z3IvwswgQm15RJid2IW.webp';
             $Upload->save();
         }
     }
