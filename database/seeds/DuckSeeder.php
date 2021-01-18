@@ -19,7 +19,7 @@ class DuckSeeder extends Seeder
             $Upload = new Upload();
         $Upload->name = '' . $i;
         $Upload->locatie = 'Amsterdam';
-        $Upload->datum = new \DateTime();
+        $Upload->datum = '';
         $Upload->image = '';
         $Upload->save();
     }
