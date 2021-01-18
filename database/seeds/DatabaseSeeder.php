@@ -1,7 +1,9 @@
 <?php
 
+use App\User;
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\Hash;
+use App\Upload;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call(UserSeeder::class);
-        $this->call(DuckSeeder::class);
+        $this->call(DucksSeeder::class);
         // $this->call(idkSeeder::class);
         // $this->call(idkSeeder::class);
     }
