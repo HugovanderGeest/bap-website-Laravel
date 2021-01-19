@@ -34,9 +34,10 @@
         <header id="header">
 
 
+
+
+
             <img class="logo" src="images/thumbs/logo.png" alt="">
-
-
 
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div class="container">
@@ -55,6 +56,8 @@
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
                             <!-- Authentication Links -->
+
+
 
 
                             @guest
@@ -92,6 +95,7 @@
                             <li class="nav-item "><a href="{{ route('upload.form') }}">upload</a></li>
                             <li class="nav-item"><a href="{{ route('tijdlijn') }}">tijdlijn</a></li>
 
+
                             @endguest
                         </ul>
                     </div>
@@ -104,11 +108,12 @@
         <!--Main -->
         <div id="main">
             @yield('content')
+            <div class="footer">
+                @yield ('footer')
+            </div>
         </div>
 
-        <div class="footer">
-            @yield ('footer')
-        </div>
+
 
     </div>
 
