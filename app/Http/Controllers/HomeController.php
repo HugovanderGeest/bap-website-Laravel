@@ -49,4 +49,13 @@ class HomeController extends Controller
 
         return view('home', ['mijntekst' => $naam, "uploads" => $uploads]);
     }
+    public function admin()
+    {
+        $naam = 'pietje';
+        // $uploads = Upload::all();
+        $uploads = Upload::paginate(20);
+
+
+        return view('admin', ['mijntekst' => $naam, "uploads" => $uploads]);
+    }
 }

@@ -16,7 +16,6 @@
         Datum: {{$upload->datum}}
         <br>
     </h2>
-    <button class="verwijder"><a href="{{ route('delete.post', $upload->id) }}">verwijder</a></button>
 
     <p>Dit is de wilde eend</p>
 </article>

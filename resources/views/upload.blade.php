@@ -4,35 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>upload</title>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
 </head>
 
 <body>
 
 
-    <form action="{{ route('upload.handel') }}" method="POST" enctype="multipart/form-data">
+    <form style="  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);" action="{{ route('upload.handel') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <label>NAAM</label>
+        <h1> Upload</h1>
+
+        <label class="punt">NAAM</label>
         @error('naam')
         <h4>{{ $message }} </h4>
         @enderror<br>
-        <input type="text" value="{{old('name')}}" name="name"><br><br>
+
+        <input style="  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;" type="text" value="{{old('name')}}" name="name"><br><br>
 
         <label>LOCATIE</label>
         @error('locatie')
         <h4>{{ $message }} </h4>
         @enderror<br>
-        <input type="text" value="{{old('locatie')}}" name="locatie"><br><br>
+
+        <input style="  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;" type="text" value="{{old('locatie')}}" name="locatie"><br><br>
 
         <label>DATUM</label>
         @error('datum')
         <h4>{{ $message }} </h4>
         @enderror<br>
-        <input type="date" value="{{old('datum')}}" name="datum"><br>
+
+        <input style="  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;" type="date" value="{{old('datum')}}" name="datum"><br>
 
         <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
-        <p><label for="file" style="cursor: pointer;">Pak foto</label></p>
+        <p><label style="  width: 100%;
+  background-color: #34a58e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;" for="file" style="cursor: pointer;">Pak foto</label></p>
         <p><img id="output" width="200" /></p>
 
         <script>
@@ -42,7 +78,13 @@
             };
         </script>
 
-        <button type="submit">Opslaan</button>
+        <button style="  width: 100%;
+  background-color: #34a58e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;" type="submit">Upload</button>
     </form>
 
 

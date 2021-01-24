@@ -2,6 +2,7 @@
 
 @section('content')
 
+<h1 class="admin"> admin page</h1>
 
 
 @foreach($uploads as $upload)
@@ -15,8 +16,9 @@
         <br>
         Datum: {{$upload->datum}}
         <br>
+        <button class="verwijder"><a href="{{ route('delete.post', $upload->id) }}">verwijder</a></button>
+
     </h2>
-    <button class="verwijder"><a href="{{ route('delete.post', $upload->id) }}">verwijder</a></button>
 
     <p>Dit is de wilde eend</p>
 </article>
