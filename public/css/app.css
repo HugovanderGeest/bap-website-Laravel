@@ -51,6 +51,11 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.black {
+    background-color: #242629;
+
+}
+
 .verwijder {
   background-color: #000;
   text-decoration: none;
@@ -100,6 +105,13 @@ body {
   color: #212529;
   text-align: left;
   background-color: #f8fafc;
+}
+
+.naviegatie {
+  list-style: none;
+  background-color: #242629;
+  width: 100%;
+
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2295,6 +2307,9 @@ textarea.form-control {
 
 .form-group {
   margin-bottom: 1rem;
+  background-color: black;
+  padding: 30px;
+  border-radius: 20px;
 }
 
 .form-text {
@@ -4443,8 +4458,9 @@ input[type=button].btn-block {
 
 .nav-link {
   display: block;
-}
+;
 
+}
 .nav-link:hover,
 .nav-link:focus {
   text-decoration: none;
@@ -4530,7 +4546,7 @@ input[type=button].btn-block {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between;]
 }
 
 .navbar .container,
@@ -4561,9 +4577,12 @@ input[type=button].btn-block {
 }
 
 .navbar-nav {
+  background-color: #495057;
+  color: white;
   display: flex;
   list-style: none;
   padding-bottom: -150px;
+  padding-left: 400px;
 }
 
 .navbar-nav .nav-link {
@@ -4581,6 +4600,7 @@ input[type=button].btn-block {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  background-color: #242629;
 }
 
 .navbar-toggler {
@@ -4666,6 +4686,7 @@ input[type=button].btn-block {
   .navbar-expand-md > .container-xl {
     padding-right: 0;
     padding-left: 0;
+    
   }
 }
 
@@ -10925,14 +10946,19 @@ a.text-dark:focus {
   }
 }
 
-.nav-item {
-  font-size: 20px;
+.nav-item  {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.nav-none {
   text-decoration: none;
 }
 
 .logo {
-  width: 105px;
+  width: 155px;
   overflow: hidden;
+  float: right;
 }
 
 .rood {

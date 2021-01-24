@@ -31,87 +31,81 @@
     <!-- Wrapper -->
     <div id="wrapper">
         <!-- Header -->
-        <header id="header">
 
-
-
-
-
-            <img class="logo" src="images/thumbs/logo.png" alt="">
-
-            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-                <div class="container">
-                    <!-- <a class="navbar-brand" href="{{ url('/') }}">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm black">
+            <!-- <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a> -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
 
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
 
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ml-auto">
-                            <!-- Authentication Links -->
+                <!-- Right Side Of Navbar -->
+                <ul class="naviegatie">
+                    <!-- Authentication Links -->
+
+                    <img class="logo" src="images/thumbs/logo.png" alt="">
 
 
 
+                    @guest
 
-                            @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                            @endif
-                            @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <li class="nav-item ">
+                        <a class="nav-link " href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <li class="nav-item "><a class="nav-none" href="{{ route('info') }}">Info</a></li>
+
+                    </li>
+                    @if (Route::has('register'))
+                    <a class=" nav-item" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    @endif
+                    @else
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">@csrf</form>
+
+                        <a href="{{route('logout')}}"></a>
 
 
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </li>
-                            <li class="nav-item ">
-                                <a id="navbarDropdown" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+                        <form id="logout-form " action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
+                    <li class="nav-item nav-none">
+                        <a id="navbarDropdown" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
 
-                            </li>
+                    </li>
 
-                            <li class="nav-item "><a href="{{ route('home') }}">Home</a></li>
-                            <li class="nav-item"><a href="{{ route('duck') }}">Duck</a></li>
-                            <li class="nav-item "><a href="{{ route('info') }}">Info</a></li>
-                            <li class="nav-item "><a href="{{ route('upload.form') }}">upload</a></li>
-                            <li class="nav-item"><a href="{{ route('tijdlijn') }}">tijdlijn</a></li>
+                    <li class="nav-item "><a class="nav-none" href="{{ route('info') }}">Info</a></li>
+                    <li class="nav-item "><a class="nav-none" href="{{ route('upload.form') }}">upload</a></li>
 
 
-                            @endguest
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-
-
-        <!--Main -->
-        <div id="main">
-            @yield('content')
-            <div class="footer">
-                @yield ('footer')
+                    @endguest
+                </ul>
             </div>
+    </div>
+    </nav>
+    </header>
+
+
+
+    <!--Main -->
+    <div id="main">
+        @yield('content')
+        <div class="footer">
+            @yield ('footer')
         </div>
+    </div>
 
 
 

@@ -12,10 +12,12 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Info </div>
+            Welkom </div>
 
         <div class="links">
-            <a> dit is de login page</a>
+            <a> Dit is Instaduck, hier kan je jouw gespotten eenden delen, waar je ze hebt gevonden waneer en wat de naam is. geniet van de mooie kopies!</a> <br>
+            <br>
+            <img src="/images/fulls/duck.jpg" alt="">
         </div>
 
         <style>
