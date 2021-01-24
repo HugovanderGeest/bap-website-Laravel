@@ -7,6 +7,7 @@ use Illuminate\Routing\Route;
 
 class DuckController extends Controller
 {
+
     public function showDuck($id, Request $request)
     {
         // return  'en id = ' . $id . $category;

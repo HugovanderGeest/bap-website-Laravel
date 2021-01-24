@@ -51,6 +51,12 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.verwijder {
+  background-color: #000;
+  text-decoration: none;
+  float: right;
+}
+
 article,
 aside,
 figcaption,
@@ -71,6 +77,9 @@ font-size: 12px;
 padding-top: 15px ;
 }
 
+.Verwijder {
+  background-color: black;
+}
 
 @media (min-width: 576px) {
   .footer {
@@ -10929,3 +10938,16 @@ a.text-dark:focus {
 .rood {
   color: red;
 }
+
+
+
+/* .thumb {
+  margin: 5px;
+  
+}
+
+.content {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+} */

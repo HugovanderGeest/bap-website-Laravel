@@ -15,6 +15,17 @@ class HomeController extends Controller
      * @return void
      */
 
+    public function deletePost($postID)
+    {
+        $dpost = Upload::find($postID);
+        if (!$dpost) {
+            abort(404);
+        } else {
+            Upload::destroy($postID);
+        }
+
+        return redirect('/home');
+    }
 
 
     // eerst inloggen functie 

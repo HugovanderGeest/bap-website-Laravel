@@ -24,9 +24,9 @@ Route::get('/tijdlijn', 'TijdlijnController@tijdlijnPage')->name('tijdlijn');
 Route::get('/upload', 'UploadController@uploadPage')->name('upload.form');
 Route::post('/upload', 'UploadController@handelPage')->name('upload.handel');
 
-
-
 Route::get('/duck', 'DuckController@uploadPage')->name('duck');
+
+Route::get('/delete/{post}', 'HomeController@deletePost')->name('delete.post');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

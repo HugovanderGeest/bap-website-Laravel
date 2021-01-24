@@ -16,7 +16,9 @@
         Datum: {{$upload->datum}}
         <br>
     </h2>
-    <p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+    <button class="verwijder"><a href="{{ route('delete.post', $upload->id) }}">verwijder</a></button>
+
+    <p>Dit is de wilde eend</p>
 </article>
 
 
